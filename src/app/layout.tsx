@@ -24,6 +24,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script type="text/javascript">
+          window.form_token = "GLFT-3SXG2ALHRO2TQDSI2XVG9SRZBHE";
+        </script>
+        <script
+          async
+          type="text/javascript"
+          src="https://api.useleadbot.com/lead-bots/get-pixel-script.js"
+        ></script>
+      </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         {children}
       </body>
