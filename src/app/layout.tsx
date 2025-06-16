@@ -32,7 +32,7 @@ export default function RootLayout({
           async
           type="text/javascript"
           src="https://api.useleadbot.com/lead-bots/get-pixel-script.js"
-        ></script>
+        />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         {children}

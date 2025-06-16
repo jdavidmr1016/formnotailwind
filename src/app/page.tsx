@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import "./page.module.css";
+export const dynamic = "force-dyamic";
 
 export default function Home() {
   const [domLoaded, setDomLoaded] = useState(false);
@@ -8,5 +9,5 @@ export default function Home() {
   useEffect(() => {
     setDomLoaded(true);
   }, []);
-  return <div>{domLoaded && <div id="leadforms-embd-form"></div>}</div>;
+  return <>{domLoaded && <div id="leadforms-embd-form"></div>}</>;
 }
