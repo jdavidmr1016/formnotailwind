@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+//import "./globals.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,7 +32,7 @@ export default function RootLayout({
           async
           type="text/javascript"
           src="https://api.useleadbot.com/lead-bots/get-pixel-script.js"
-        />
+        ></script>
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         {children}

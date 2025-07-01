@@ -1,13 +1,17 @@
 "use client";
 import { useEffect, useState } from "react";
-import "./page.module.css";
+//import "./page.module.css";
 export const dynamic = "force-dynamic";
 
 export default function Home() {
-  const [domLoaded, setDomLoaded] = useState(false);
+  const [viewLoaded, setViewLoaded] = useState(false);
 
   useEffect(() => {
-    setDomLoaded(true);
+    setViewLoaded(true);
+    return () => {
+      setViewLoaded(false);
+    };
   }, []);
-  return <>{domLoaded && <div id="leadforms-embd-form"></div>}</>;
+
+  return <div>{viewLoaded && <div id="leadforms-embd-form" />}</div>;
 }
